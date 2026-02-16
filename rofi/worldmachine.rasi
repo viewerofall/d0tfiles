@@ -1,0 +1,76 @@
+
+* {
+    bg: #000000;
+    entry: #9564FD;
+    entry-text: #000000;
+    text: #9564FD;
+    border: #9564FD;
+
+    /* INCREASED SIZE */
+    width: 720;  /* Doubled from 360 */
+    font: "Terminess Nerd Font Bold 15";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 600px;  /* Increased from 375px */
+    border-color: @border;
+    border: 4px;
+    border-radius: 0px;
+    background-color: @bg;
+}
+
+mainbox {
+    background-color: @bg;
+    padding: 15px 25px 25px;  /* More padding for bigger window */
+}
+
+inputbar {
+    children: [entry];
+    background-color: @bg;
+}
+
+entry {
+    padding: 12px 15px;  /* Bigger padding */
+    margin: 25px 0 15px 1px;
+    text-color: @entry-text;
+    background-color: @entry;
+    placeholder: "Search";
+    placeholder-color: @entry-text;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 10px 0px 0px;
+    columns: 1;
+    lines: 8;  /* Increased from 5 to 8 */
+    background-color: @bg;
+}
+
+element {
+    background-color: @bg;
+    text-color: @text;
+    padding: 8px;  /* More padding */
+    margin: 2px;
+    border: 3px;
+    border-color: @border;
+}
+
+element-icon {
+    size: 40px;  /* Bigger icons from 32px */
+}
+
+element selected {
+    background-color:  @text ;
+    text-color: @bg  ;
+}
+
+mode-switcher {
+  enabled: false;
+  spacing: 0;
+}
+

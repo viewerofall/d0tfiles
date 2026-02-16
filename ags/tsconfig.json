@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "astal/gtk3/jsx-runtime",
+    "moduleResolution": "bundler",
+    "paths": {
+      "astal": ["/usr/share/astal/gjs/_astal.ts"],
+      "astal/*": ["/usr/share/astal/gjs/*"],
+      "astal/gtk3": ["/usr/share/astal/gjs/gtk3/index.ts"],
+      "astal/gtk3/*": ["/usr/share/astal/gjs/gtk3/*"]
+    },
+    "skipLibCheck": true,
+    "strict": false
+  }
+}

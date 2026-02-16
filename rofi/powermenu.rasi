@@ -1,0 +1,93 @@
+/* Power Menu - Oneshot World Machine Theme */
+
+* {
+    bg: #000000;
+    bg-alt: #0a0a0a;
+    fg: #9564FD;
+    fg-alt: #7B4FD9;
+    border: #9564FD;
+    selected: #9564FD;
+    selected-fg: #000000;
+    urgent: #FF6B9D;
+    
+    background-color: transparent;
+    text-color: @fg;
+    font: "Terminess Nerd Font Bold 16";
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    border: 4px;
+    border-color: @border;
+    border-radius: 0px;
+    width: 500px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [ message, listview ];
+    padding: 20px;
+    spacing: 15px;
+}
+
+message {
+    background-color: @bg;
+    border: 0px;
+    padding: 10px;
+}
+
+textbox {
+    text-color: @fg;
+    background-color: @bg;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+listview {
+    background-color: @bg;
+    columns: 5;
+    lines: 1;
+    spacing: 15px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    background-color: @bg;
+    text-color: @fg;
+    orientation: vertical;
+    border: 3px;
+    border-color: @border;
+    border-radius: 0px;
+    padding: 25px 20px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    font: "Terminess Nerd Font Bold 14";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 48px;
+    horizontal-align: 0.5;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @selected-fg;
+    border-color: @selected;
+}
+
+element urgent {
+    background-color: @urgent;
+    text-color: @bg;
+    border-color: @urgent;
+}

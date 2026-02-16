@@ -1,0 +1,153 @@
+/* Oneshot Wallpaper Selector - Grid with Image Previews */
+
+* {
+    bg: #000000;
+    bg-alt: #0a0a0a;
+    fg: #9564FD;
+    fg-alt: #7B4FD9;
+    border: #9564FD;
+    selected: #9564FD;
+    selected-fg: #000000;
+    checkmark: #FFFF33;
+    
+    background-color: transparent;
+    text-color: @fg;
+    font: "Terminess Nerd Font Bold 12";
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    border: 4px;
+    border-color: @border;
+    border-radius: 0px;
+    width: 1100px;
+    height: 700px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [ message, inputbar, listview ];
+    padding: 20px;
+    spacing: 15px;
+}
+
+message {
+    background-color: @bg;
+    border: 0px;
+    padding: 10px;
+}
+
+textbox {
+    text-color: @fg;
+    background-color: @bg;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg;
+    spacing: 10px;
+    padding: 5px;
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: @checkmark;
+    font: "Terminess Nerd Font Bold 14";
+    padding: 8px 12px;
+}
+
+entry {
+    enabled: true;
+    background-color: @bg-alt;
+    text-color: @fg;
+    placeholder-color: @fg-alt;
+    placeholder: "Search wallpapers...";
+    padding: 10px 15px;
+    border: 2px;
+    border-color: @border;
+    border-radius: 0px;
+}
+
+listview {
+    background-color: @bg;
+    columns: 3;
+    lines: 3;
+    cycle: true;
+    dynamic: true;
+    scrollbar: true;
+    layout: vertical;
+    spacing: 10px;
+    padding: 10px 0px;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+scrollbar {
+    handle-width: 8px;
+    handle-color: @border;
+    background-color: @bg-alt;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px 4px;
+}
+
+element {
+    background-color: @bg;
+    text-color: @fg;
+    padding: 10px;
+    border: 3px;
+    border-color: @bg-alt;
+    border-radius: 0px;
+    orientation: vertical;
+    spacing: 5px;
+}
+
+element normal.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @selected-fg;
+    border-color: @selected;
+}
+
+element alternate.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* The wallpaper thumbnail image */
+element-icon {
+    background-color: transparent;
+    size: 200px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    border: 2px;
+    border-color: @border;
+}
+
+element selected.normal element-icon {
+    border-color: @checkmark;
+}
+
+/* The wallpaper name text */
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    font: "Terminess Nerd Font Bold 11";
+}
+
+/* Mark current wallpaper */
+element-text selected {
+    font: "Terminess Nerd Font Bold 12";
+}

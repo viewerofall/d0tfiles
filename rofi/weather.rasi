@@ -1,0 +1,94 @@
+/* Weather Widget - Rofi Theme (FIXED) */
+
+* {
+    bg: #000000;
+    bg-alt: #0a0a0a;
+    fg: #9564FD;
+    fg-alt: #7B4FD9;
+    border: #9564FD;
+    selected: #9564FD;
+    selected-fg: #000000;
+    info: #FFFF33;
+    
+    background-color: transparent;
+    text-color: @fg;
+    font: "Terminess Nerd Font Bold 13";
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    border: 4px;
+    border-color: @border;
+    border-radius: 10px;
+    width: 450px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [ inputbar, message, listview ];
+    padding: 20px;
+    spacing: 15px;
+}
+
+inputbar {
+    children: [ prompt ];
+    background-color: transparent;
+    padding: 5px 0px;
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: @info;
+    font: "Terminess Nerd Font Bold 16";
+    padding: 8px 0px;
+}
+
+message {
+    background-color: @bg-alt;
+    border-width: 2px;
+    border-color: @border;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+textbox {
+    text-color: @fg;
+    background-color: transparent;
+    font: "Terminess Nerd Font 13";
+}
+
+listview {
+    background-color: @bg;
+    columns: 1;
+    lines: 4;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    spacing: 4px;
+    padding: 5px 0px;
+}
+
+element {
+    background-color: @bg;
+    text-color: @fg;
+    padding: 10px 15px;
+    border-width: 2px;
+    border-color: @bg-alt;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @selected-fg;
+    border-color: @selected;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}

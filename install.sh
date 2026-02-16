@@ -66,7 +66,7 @@ timestamp=$(date +%Y%m%d_%H%M%S)
 
 # Copy config files
 echo "📁 Installing configuration files..."
-mkdir -p ~/.config/{hypr,ags,rofi,swaync}
+mkdir -p ~/.config/{hypr,ags,rofi,swaync,fastfetch}
 
 # Copy Hyprland config
 cp -r "$SCRIPT_DIR/hypr/"* ~/.config/hypr/
@@ -86,6 +86,8 @@ cp -r "$SCRIPT_DIR/swaync/"* ~/.config/swaync/
 
 cp -r "$SCRIPT_DIR/splash/"* ~/.config/splash
 chmod +x ~/.config/splash/launch-hyprland.sh ~/.config/splash/startup.py
+
+cp -r "$SCRIPT_DIR/fastfetch/"* ~/.config/fastfetch
 
 # Create wallpapers directory
 mkdir -p ~/Pictures/Wallpapers

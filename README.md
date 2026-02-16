@@ -2,10 +2,6 @@
 
 A beautiful purple-themed Hyprland rice inspired by OneShot, featuring a custom AGS (Astal) bar with modern widgets and smooth animations.
 
-![Preview](preview.png)
-
-## ✨ Features
-
 ### 🎨 Visual Design
 - **Purple & Black Theme** - Inspired by OneShot's World Machine
 - **Gradient Effects** - Smooth gradients throughout the UI
@@ -256,11 +252,6 @@ sudo pacman -S nvidia-utils
 - **CPU Usage:** <1% idle
 - **Startup Time:** <2 seconds
 
-
-## 📝 License
-
-MIT License - Feel free to use and modify!
-
 ## 💜 Contributing
 
 Pull requests welcome! Feel free to:
@@ -269,6 +260,9 @@ Pull requests welcome! Feel free to:
 - Fix bugs
 - Add themes
 - Make better AGS (I will probably merge yours since my ags sucks)
+
+  ## Kitty notes
+The kitty config is just if you want to install it because the default theme is quite nice for kitty, this is optional like always but I would recommend it.
 ---
 
 I fucking hate customizing ags I spent 6 hours on it just to get it to work
